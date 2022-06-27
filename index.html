@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css">
+
+</head>
+
+<body class="blocks">
+    <header class="header">
+        <img class="header__logo" alt="Логотип проекта" src="./images/Vector.png">
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile__left">
+                <div class="profile__avatar"></div>
+                <div class="profile__info">
+                    <div class="profile__text">
+                        <h1 class="profile__headline">Жак-Ив Кусто</h1>
+                        <p class="profile__caption">Исследователь океана</p>
+                    </div>
+                    <button class="profile__edit">
+                    <img class="profile__pencil" alt="Карандаш" src="./images/pencil.png">
+                </button>
+                </div>
+            </div>
+            <button class="profile__rectangle">
+                <img class="profile__plus" alt="Плюс" src="./images/cross.png">
+            </button>
+        </section>
+        <section class="elements">
+            <ul class="elements__grid">
+                <li class="element">
+                    <img class="element__image" alt="Минск" src="./images/minsk.jpg">
+                    <div class="element__caption">
+                        <p class="element__text">Минск</p>
+                        <div class="element__like"></div>
+                    </div>
+                </li>
+                <li class="element ">
+                    <img class="element__image" alt="Могилев" src="./images/mogilev.jpg">
+                    <div class="element__caption">
+                        <p class="element__text">Могилев</p>
+                        <div class="element__like"></div>
+                    </div>
+                </li>
+                <li class="element">
+                    <img class="element__image" alt="Витебск" src="./images/vitebsk .jpg">
+                    <div class="element__caption">
+                        <p class="element__text">Витебск</p>
+                        <div class="element__like"></div>
+                    </div>
+                </li>
+                <li class="element ">
+                    <img class="element__image" alt="Брест" src="./images/brest.jpg">
+                    <div class="element__caption">
+                        <p class="element__text">Брест</p>
+                        <div class="element__like"></div>
+                    </div>
+                </li>
+                <li class="element">
+                    <img class="element__image" alt="Гомель" src="./images/gomell.jpg">
+                    <div class="element__caption">
+                        <p class="element__text">Гомель</p>
+                        <div class="element__like"></div>
+                    </div>
+                </li>
+                <li class="element">
+                    <img class="element__image" alt="Гродно" src="./images/grodno.jpg">
+                    <div class="element__caption">
+                        <p class="element__text">Гродно</p>
+                        <div class="element__like"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__author">&copy 2022 Mesto Russia</p>
+    </footer>
+    <div class="popup">
+        <div class="popup__container">
+            <p class="popup__text">Редактировать профиль</p>
+            <form class="popup__form">
+                <fieldset class="popup__field">
+                    <input class="popup__name" type="text" value='Жак-Ив Кусто'>
+                </fieldset>
+                <fieldset class="popup__field">
+                    <input class="popup__job" type="text" value='Исследователь океана'>
+                </fieldset>
+                <button class="popup__submit">
+                    <p class="popup__save"> Сохранить</p>
+                </button>
+                <button class="popup__close"></button>
+            </form>
+        </div>
+    </div>
+    <script src="./script/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+.popup__submit {
+    width: 358px;
+    background: rgba(0, 0, 0, 1);
+    transition: opacity 0.2s ease-in-out;
+    margin-top: 48px;
+}
+
+.popup__submit:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 568px) {
+    .popup__submit {
+        width: 238px;
+        margin-bottom: 25px;
+    }
+}

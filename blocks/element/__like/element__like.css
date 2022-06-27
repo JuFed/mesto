@@ -1,0 +1,10 @@
+.element__like {
+    width: 22px;
+    height: 19px;
+    background-image: url(../../../images/heart.jpg);
+    transition: all 0.3s ease;
+}
+
+.element__like:hover {
+    background-image: url(../../../images/likeactive.jpg);
+}

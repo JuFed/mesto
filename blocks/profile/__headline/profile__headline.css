@@ -1,0 +1,29 @@
+.profile__headline {
+    font-size: 42px;
+    line-height: 48px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 13px;
+    padding-right: 18px;
+    max-width: 294px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 984px) {
+    .profile__headline {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .profile__headline {
+        max-width: 189px;
+        font-size: 27px;
+        line-height: 32px;
+        padding-top: 23px;
+        padding-bottom: 14px;
+    }
+}
