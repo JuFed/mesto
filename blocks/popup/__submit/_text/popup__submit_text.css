@@ -1,5 +1,4 @@
-.popup__save {
-    margin: 0 auto;
+.popup__submit_text {
     padding-top: 14px;
     padding-bottom: 16px;
     font-size: 18px;
@@ -9,7 +8,7 @@
 }
 
 @media screen and (max-width: 568px) {
-    .popup__save {
+    .popup__submit_text {
         font-size: 14px;
         padding-bottom: 14px;
     }

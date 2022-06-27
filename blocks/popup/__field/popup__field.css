@@ -5,3 +5,11 @@
     padding-top: 30px;
     outline: none;
 }
+
+@media screen and (max-width: 568px) {
+    .popup__field {
+        width: 238px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
