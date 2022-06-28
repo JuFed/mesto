@@ -6,6 +6,7 @@
     transition: all 0.3s ease;
     border: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 .element__like:hover {
@@ -14,6 +15,4 @@
 
 .element__like:active {
     background-image: url(../../../images/heartactive.svg);
-    opacity: 100%;
-    cursor: pointer;
 }
