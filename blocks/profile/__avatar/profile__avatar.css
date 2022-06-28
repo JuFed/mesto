@@ -1,6 +1,5 @@
 .profile__avatar {
     background-image: url(../../../images/image.png);
-    box-sizing: border-box;
     background-repeat: no-repeat;
     border-radius: 50%;
     height: 120px;

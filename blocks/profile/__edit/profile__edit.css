@@ -1,11 +1,13 @@
 .profile__edit {
     background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.7);
+    background-image: url(../../../images/pencil.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.7);
     height: 24px;
     width: 24px;
     position: relative;
     top: -14px;
-    border-radius: 2px;
     transition: opacity 0.2s ease-in-out;
     padding: 0;
 }
@@ -18,5 +20,7 @@
 @media screen and (max-width: 568px) {
     .profile__edit {
         top: -22px;
+        height: 18px;
+        width: 18px;
     }
 }

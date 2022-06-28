@@ -1,10 +1,19 @@
 .element__like {
     width: 22px;
     height: 19px;
-    background-image: url(../../../images/heart.jpg);
+    background-image: url(../../../images/heartnotactive.svg);
+    background-color: transparent;
     transition: all 0.3s ease;
+    border: 0;
+    padding: 0;
 }
 
 .element__like:hover {
-    background-image: url(../../../images/likeactive.jpg);
+    opacity: 50%;
+}
+
+.element__like:active {
+    background-image: url(../../../images/heartactive.svg);
+    opacity: 100%;
+    cursor: pointer;
 }
