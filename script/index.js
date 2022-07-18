@@ -81,9 +81,9 @@ function createCard(card) {
 
   function openFullSize() {
     openPopupImage();
-    popupElementImage.querySelector('.element__text_type_image').textContent = card.name;
-    popupElementImage.querySelector('.element_opened').src = card.link;
-    popupElementImage.querySelector('.element_opened').alt = card.name;
+    popupElementImage.querySelector('.popup__text-image').textContent = card.name;
+    popupElementImage.querySelector('.popup__open-image').src = card.link;
+    popupElementImage.querySelector('.popup__open-image').alt = card.name;
     popupCloseImage.addEventListener('click', closePopupImage);
   }
   const imageFullSize = cardElement.querySelector('.element__image');
@@ -127,8 +127,8 @@ function createInitialCards() {
 }
 
 const cardForm = document.querySelector('.popup__form_type_card');
-const cardNameInput = cardForm.querySelector('.popup__field_type_name_card');
-const cardLinkInput = cardForm.querySelector('.popup__field_type_picture_card');
+const cardNameInput = cardForm.querySelector('.popup__field_type_cardname');
+const cardLinkInput = cardForm.querySelector('.popup__field_type_cardpicture');
 
 //сабмит формы 
 
