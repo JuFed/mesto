@@ -1,0 +1,6 @@
+.element_opened{
+    max-width: 75vw;
+    max-height: 75vh;
+    object-fit: contain;
+
+}

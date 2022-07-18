@@ -3,7 +3,7 @@
     width: 32px;
     position: absolute;
     top: -40px;
-    left: 438px;
+    right: -40px;
     background-color: transparent;
     background-image: url(../../../images/CloseIconpopup.svg);
     background-size: cover;
@@ -23,6 +23,6 @@
         height: 20px;
         width: 20px;
         top: -37px;
-        left: 260px;
+        right: 0;
     }
 }

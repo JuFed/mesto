@@ -2,94 +2,80 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
 
 </head>
 
 <body class="blocks">
-    <header class="header">
-        <img class="header__logo" alt="Логотип проекта" src="./images/Vectorheader.svg">
-    </header>
-    <main>
-        <section class="profile">
-            <div class="profile__left">
-                <div class="profile__avatar"></div>
-                <div class="profile__info">
-                    <div class="profile__text">
-                        <h1 class="profile__headline">Жак-Ив Кусто</h1>
-                        <p class="profile__caption">Исследователь океана</p>
-                    </div>
-                    <button type="button" class="profile__edit"></button>
-                </div>
-            </div>
-            <button type="button" class="profile__rectangle"></button>
-        </section>
-        <section class="elements">
-            <ul class="elements__grid">
-                <li class="element">
-                    <img class="element__image" alt="Минск" src="./images/minsk.jpg">
-                    <div class="element__caption">
-                        <h2 class="element__text">Минск</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </li>
-                <li class="element ">
-                    <img class="element__image" alt="Могилев" src="./images/mogilev.jpg">
-                    <div class="element__caption">
-                        <h2 class="element__text">Могилев</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </li>
-                <li class="element">
-                    <img class="element__image" alt="Витебск" src="./images/vitebsk.jpg">
-                    <div class="element__caption">
-                        <h2 class="element__text">Витебск</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </li>
-                <li class="element ">
-                    <img class="element__image" alt="Брест" src="./images/brest.jpg">
-                    <div class="element__caption">
-                        <h2 class="element__text">Брест</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </li>
-                <li class="element">
-                    <img class="element__image" alt="Гомель" src="./images/gomell.jpg">
-                    <div class="element__caption">
-                        <h2 class="element__text">Гомель</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </li>
-                <li class="element">
-                    <img class="element__image" alt="Гродно" src="./images/grodno.jpg">
-                    <div class="element__caption">
-                        <h2 class="element__text">Гродно</h2>
-                        <button type="button" class="element__like"></button>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer class="footer">
-        <p class="footer__author">&copy; 2022 Mesto Russia</p>
-    </footer>
-    <div class="popup">
-        <div class="popup__container">
-            <form class="popup__form">
-                <h2 class="popup__text">Редактировать профиль</h2>
-                <input class="popup__field popup__field_type_name" type="text" value='Жак-Ив Кусто'>
-                <input class="popup__field popup__field_type_job" type="text" value='Исследователь океана'>
-                <button type="submit" class="popup__submit">Сохранить</button>
-                <button type="button" class="popup__close"></button>
-            </form>
+  <header class="header">
+    <img class="header__logo" alt="Логотип проекта" src="./images/Vectorheader.svg">
+  </header>
+  <main>
+    <section class="profile">
+      <div class="profile__left">
+        <div class="profile__avatar"></div>
+        <div class="profile__info">
+          <div class="profile__text">
+            <h1 class="profile__headline">Жак-Ив Кусто</h1>
+            <p class="profile__caption">Исследователь океана</p>
+          </div>
+          <button type="button" class="profile__edit"></button>
         </div>
+      </div>
+      <button type="button" class="profile__rectangle"></button>
+    </section>
+    <section class="elements">
+      <ul class="elements__grid">
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__author">&copy; 2022 Mesto Russia</p>
+  </footer>
+  <div class="popup popup_type_profile">
+    <div class="popup__container">
+      <form class="popup__form">
+        <h2 class="popup__text">Редактировать профиль</h2>
+        <input class="popup__field popup__field_type_name" type="text" value='Жак-Ив Кусто'>
+        <input class="popup__field popup__field_type_job" type="text" value='Исследователь океана'>
+        <button type="submit" class="popup__submit">Сохранить</button>
+        <button type="button" class="popup__close"></button>
+      </form>
     </div>
-    <script src="./script/index.js"></script>
+  </div>
+  <div class="popup popup_type_card">
+    <div class="popup__container">
+      <form class="popup__form popup__form_type_card">
+        <h2 class="popup__text">Новое место</h2>
+        <input class="popup__field popup__field_type_name_card" type="text" placeholder='Название'>
+        <input class="popup__field popup__field_type_picture_card" type="text" placeholder='Ссылка на картинку'>
+        <button type="submit" class="popup__submit">Создать</button>
+        <button type="button" class="popup__close"></button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_type_image">
+    <div class="popup__container_type_image">
+      <img class="element_opened" alt="" src=''>
+      <h2 class="element__text_type_image"></h2>
+      <button type="button" class="popup__close"></button>
+    </div>
+  </div>
+  <template class='template'>
+    <li class="element">
+      <button class='element__delete'></button>
+      <img class="element__image" alt="" src=''>
+      <div class="element__caption">
+        <h2 class="element__text"></h2>
+        <button type="button" class="element__like "></button>
+      </div>
+    </li>
+  </template>
+  <script src="./script/index.js"></script>
 </body>
 
 </html>

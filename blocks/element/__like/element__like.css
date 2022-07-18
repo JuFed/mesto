@@ -13,6 +13,3 @@
     opacity: 50%;
 }
 
-.element__like:active {
-    background-image: url(../../../images/heartactive.svg);
-}
