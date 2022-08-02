@@ -2,7 +2,7 @@
     width: 358px;
     background: rgba(0, 0, 0, 1);
     transition: opacity 0.2s ease-in-out;
-    margin-top: 47px;
+    margin-top: 24px;
     padding-top: 13px;
     padding-bottom: 15px;
     border: 0;
@@ -10,6 +10,7 @@
     font-weight: 400;
     line-height: 22px;
     color: rgba(255, 255, 255, 1);
+    position:fixed;
 }
 
 .popup__submit:hover {
@@ -21,7 +22,7 @@
     .popup__submit {
         width: 238px;
         margin-bottom: 25px;
-        margin-top: 45px;
+        margin-top: 20px;
         font-size: 14px;
         padding-bottom: 14px;
     }

@@ -8,7 +8,9 @@
     outline: none;
     width: 354px;
     font-size: 14px;
-}
+    }
+    
+
 
 @media screen and (max-width: 568px) {
     .popup__field {
@@ -16,4 +18,7 @@
         padding-left: 0;
         padding-right: 0;
     }
+}
+.popup__field_type_error{
+    border-bottom: 1px solid red; 
 }

@@ -38,10 +38,12 @@
   </footer>
   <div class="popup popup_type_profile">
     <div class="popup__container">
-      <form class="popup__form">
+      <form class="popup__form" novalidate>
         <h2 class="popup__text">Редактировать профиль</h2>
-        <input class="popup__field popup__field_type_name" type="text">
-        <input class="popup__field popup__field_type_job" type="text">
+        <input id="input" class="popup__field popup__field_type_name " type="text" required minlength="2" maxlength="40">
+        <span class = "popup__error"></span>
+        <input id="input" class="popup__field popup__field_type_job " type="text" required minlength="2" maxlength="200">
+        <span class = "popup__error"></span>
         <button type="submit" class="popup__submit">Сохранить</button>
         <button type="button" class="popup__close"></button>
       </form>
@@ -49,10 +51,12 @@
   </div>
   <div class="popup popup_type_card">
     <div class="popup__container">
-      <form class="popup__form popup__form_type_card">
+      <form class="popup__form popup__form_type_card" novalidate>
         <h2 class="popup__text">Новое место</h2>
-        <input class="popup__field popup__field_type_cardname" type="text" placeholder='Название'>
-        <input class="popup__field popup__field_type_cardpicture" type="text" placeholder='Ссылка на картинку'>
+        <input id="input" class="popup__field popup__field_type_cardname " type="text" placeholder='Название' required minlength="2" maxlength="30">
+        <span class = "popup__error"></span>
+        <input  id="input" class="popup__field popup__field_type_cardpicture" type="url" placeholder='Ссылка на картинку' required>
+        <span class = "popup__error"></span>
         <button type="submit" class="popup__submit">Создать</button>
         <button type="button" class="popup__close"></button>
       </form>
@@ -76,6 +80,7 @@
     </li>
   </template>
   <script src="./script/index.js"></script>
+  <script src="./script/validate.js"></script>
 </body>
 
 </html>

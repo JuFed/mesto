@@ -31,6 +31,17 @@ const cardsContainer = document.querySelector('.elements__grid');
 //заготовка карточек
 const template = document.querySelector('.template').content.querySelector('.element');
 
+//закрытие на overlay 
+const popupList = Array.from(document.querySelectorAll('.popup'));
+popupList.forEach((popup) =>{
+popup.onclick = function(evt){
+  if(evt.target === popup){
+    closePopup(popupElementProfile);
+    closePopup(popupElementImage);
+    closePopup(popupElementCard);
+  }
+}
+});
 function openPopup(popup) {
   popup.classList.add('popup_opened');
 }
@@ -38,6 +49,13 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closePopup(popupElementProfile);
+    closePopup(popupElementImage);
+    closePopup(popupElementCard);
+  }});
 
 function openPropfilePopup() { 
   nameInput.value = userName.textContent;
