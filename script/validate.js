@@ -2,7 +2,7 @@ const config = {
   formElement: '.popup__form',
   inputElement: '.popup__field',
   submitButtonSelector: '.popup__submit',
-  inactiveButtonClass: '.popup__submit_disabled',
+  inactiveButtonClass: 'popup__submit_disabled',
   inputErrorClass: '.popup__field_type_error',
   errorElement: '.popup__error'
 }; 
