@@ -30,32 +30,31 @@ const cardsContainer = document.querySelector('.elements__grid');
 
 //заготовка карточек
 const template = document.querySelector('.template').content.querySelector('.element');
+//кнопка 
+const popupSubmitButton = document.getElementById('cardSubmitButton');
 
 //закрытие на overlay 
+
 const popupList = Array.from(document.querySelectorAll('.popup'));
 popupList.forEach((popup) =>{
-popup.onclick = function(evt){
+popup.addEventListener('click', function(evt){
   if(evt.target === popup){
-    closePopup(popupElementProfile);
-    closePopup(popupElementImage);
-    closePopup(popupElementCard);
+    closePopup(evt.target);
   }
-}
+})
 });
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', function(event) {
+    const popupTarget = document.querySelector(".popup_opened"); 
+    if (event.key === 'Escape') {
+      closePopup(popupTarget);
+    }});
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }
-
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    closePopup(popupElementProfile);
-    closePopup(popupElementImage);
-    closePopup(popupElementCard);
-  }});
 
 function openPropfilePopup() { 
   nameInput.value = userName.textContent;
@@ -150,6 +149,8 @@ formElementCard.addEventListener('submit', function (event) {
   });
   closePopup(popupElementCard);
   formElementCard.reset();
+  popupSubmitButton.setAttribute('disabled', true);
+  popupSubmitButton.classList.add('popup__submit_disabled');
 })
 
 
