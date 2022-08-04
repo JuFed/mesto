@@ -3,25 +3,26 @@ const config = {
   inputElement: '.popup__field',
   submitButtonSelector: '.popup__submit',
   inactiveButtonClass: 'popup__submit_disabled',
-  inputErrorClass: '.popup__field_type_error',
-  errorElement: '.popup__error'
+  inputErrorClass: 'popup__field_type_error',
+  errorElement: 'popup__error',
+  errorElementActive: 'popup__error_active'
 }; 
 
-const showError = (formElement, inputElement, errorMessage) => {
-  const errorElement = inputElement.nextElementSibling;
-  inputElement.classList.add('popup__field_type_error');
+const showError = (formElement, inputElement, errorMessage, settings) => {
+  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+  inputElement.classList.add(config.inputErrorClass);
   errorElement.textContent = errorMessage;
-  errorElement.classList.add('popup__error_active');
+  errorElement.classList.add(config.errorElementActive);
 };
 
 const hideError = (formElement, inputElement) => {
-  const errorElement = inputElement.nextElementSibling;
-  inputElement.classList.remove('popup__field_type_error');
-  errorElement.classList.remove('popup__error_active');
+  const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+  inputElement.classList.remove(config.inputErrorClass);
+  errorElement.classList.remove(config.errorElementActive);
   errorElement.textContent='';
 };
 
-const checkInputValidity = (formElement, inputElement) => {
+const checkInputValidity = (formElement, inputElement, settings) => {
   if (!inputElement.validity.valid) {
   showError(formElement, inputElement, inputElement.validationMessage);
 } else {
