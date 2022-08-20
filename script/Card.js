@@ -1,6 +1,3 @@
-import handleCardClick from './index.js';
-
-
 export default class Cards {
   constructor(data, templateSelector, handleCardClick) {
     this._text = data.name;
@@ -21,6 +18,7 @@ _getTemplate(){
   this._setEventListeners();
   this._element.querySelector('.element__image').src = this._link;
   this._element.querySelector('.element__text').textContent = this._text;
+  this._element.querySelector('.element__image').alt = this._text;
   return this._element;
 }
 _setEventListeners() {
@@ -38,6 +36,7 @@ _handleButtonClick(){
   this._element.querySelector('.element__like').classList.toggle('element__like_active');
 }
 _handleCardDelete(){
+  this._element = null
   this._element.remove();
 }
 }; 

@@ -1,14 +1,4 @@
-export const config = {
-    formElement: '.popup__form',
-    inputElement: '.popup__field',
-    submitButtonSelector: '.popup__submit',
-    inactiveButtonClass: 'popup__submit_disabled',
-    inputErrorClass: 'popup__field_type_error',
-    errorElement: 'popup__error',
-    errorElementActive: 'popup__error_active'
-  }; 
-
-  export class FormValidator {
+  export default class FormValidator {
     constructor(config, form) {
     this._config = config;
     this._form = form;
@@ -58,10 +48,7 @@ export const config = {
           } 
     }
     enableValidation(){
-        this._formList = Array.from(document.querySelectorAll(this._config.formElement)); 
-        this._formList.forEach((formElement) => {
-          this._setEventListeners();
-      }); 
+        this._setEventListeners();
     }
 }
 

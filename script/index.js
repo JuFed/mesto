@@ -1,5 +1,5 @@
 import Cards from './Card.js';
-import { FormValidator, config } from './FormValidator.js';
+import FormValidator from './FormValidator.js';
 
 //попап в профиле
 const popupElementProfile = document.querySelector('.popup_type_profile');
@@ -111,8 +111,7 @@ const initialCards = [{
 //создание экземпляра класса из card
 
 initialCards.forEach((item) => {
-  const card = new Cards(item, '.template', handleCardClick);
-  const cardElement = card.generateCard();
+  const cardElement = addNewCard(item);
   cardsContainer.append(cardElement);
 });
 //функция открытие полного размера картинки
@@ -144,16 +143,23 @@ formElementCard.addEventListener('submit', function (event) {
   }));
   closePopup(popupElementCard);
   formElementCard.reset();
-  popupSubmitButton.setAttribute('disabled', true);
-  popupSubmitButton.classList.add('popup__submit_disabled');
 })
 
+const config = {
+  formElement: '.popup__form',
+  inputElement: '.popup__field',
+  submitButtonSelector: '.popup__submit',
+  inactiveButtonClass: 'popup__submit_disabled',
+  inputErrorClass: 'popup__field_type_error',
+  errorElement: 'popup__error',
+  errorElementActive: 'popup__error_active'
+}; 
 //экземпляр класса FormValidator
 
-const formCardCheckValid1 = new FormValidator(config, formElementProfile);
-const formCardCheckValid2 = new FormValidator(config, formElementCard);
-formCardCheckValid1.enableValidation();
-formCardCheckValid2.enableValidation();
+const formProfileCheckValidity = new FormValidator(config, formElementProfile);
+const formCardCheckValidity = new FormValidator(config, formElementCard);
+formProfileCheckValidity.enableValidation();
+formCardCheckValidity.enableValidation();
 
 
 
