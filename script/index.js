@@ -143,6 +143,8 @@ formElementCard.addEventListener('submit', function (event) {
   }));
   closePopup(popupElementCard);
   formElementCard.reset();
+  popupSubmitButton.setAttribute('disabled', true);
+  popupSubmitButton.classList.add('popup__submit_disabled');
 })
 
 const config = {
