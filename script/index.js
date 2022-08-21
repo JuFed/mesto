@@ -61,6 +61,7 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closeByEsc);
+  formElementCard.reset();
 }
 
 function openPropfilePopup() { 
@@ -79,7 +80,10 @@ popupOpenProfile.addEventListener('click', openPropfilePopup);
 popupCloseProfile.addEventListener('click', () => closePopup(popupElementProfile));
 
 
-popupOpenCard.addEventListener('click', () => openPopup(popupElementCard));
+popupOpenCard.addEventListener('click', () => {
+  formCardCheckValidity.resetValidation();
+  openPopup(popupElementCard)
+});
 popupCloseCard.addEventListener('click', () => closePopup(popupElementCard));
 
 //карточки
@@ -114,7 +118,7 @@ initialCards.forEach((item) => {
   const cardElement = addNewCard(item);
   cardsContainer.append(cardElement);
 });
-//функция открытие полного размера картинки
+//функция открытия полного размера картинки
 export default function handleCardClick(name, link){
   popupElementImageCaption.textContent = name;
   popupElementImageFull.src = link;
@@ -142,9 +146,6 @@ formElementCard.addEventListener('submit', function (event) {
     link: newCardImage
   }));
   closePopup(popupElementCard);
-  formElementCard.reset();
-  popupSubmitButton.setAttribute('disabled', true);
-  popupSubmitButton.classList.add('popup__submit_disabled');
 })
 
 const config = {
@@ -162,6 +163,7 @@ const formProfileCheckValidity = new FormValidator(config, formElementProfile);
 const formCardCheckValidity = new FormValidator(config, formElementCard);
 formProfileCheckValidity.enableValidation();
 formCardCheckValidity.enableValidation();
+
 
 
 
